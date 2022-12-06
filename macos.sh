@@ -8,3 +8,4 @@ brew install --cask kitty macvim
 ln -s "${HOME}/Workspace/public/dotfiles/.zshrc" "${HOME}/.zshrc"
 ln -s "${HOME}/Workspace/public/dotfiles/.vimrc" "${HOME}/.vimrc"
 ln -s "${HOME}/Workspace/public/dotfiles/.gitconfig" "${HOME}/.gitconfig"
+ln -s "${HOME}/Workspace/public/dotfiles/.ssh/config" "${HOME}/.ssh/config"
