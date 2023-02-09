@@ -2,7 +2,7 @@
 
 brew install autojump bat ffmpeg git gnupg jq neofetch nmap ranger ripgrep wifi-password yt-dlp
 
-brew install --cask kitty macvim
+brew install --cask kitty macvim nightfall
 
 # alias dotfiles
 ln -s "${HOME}/Workspace/dotfiles/.zshrc" "${HOME}/.zshrc"
