@@ -1,14 +1,28 @@
-[pull]
-	rebase = false
 [user]
-	name = Richárd Szegh
-	email = rich@richardszegh.com
+  name = Richárd Szegh
+  email = rich@richardszegh.com
+  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMf3BimpDK51+UPAGRyuJVnfsX5fMFEV9aa5TSFGw8qR
+
+[gpg]
+  format = ssh
+
+[gpg "ssh"]
+  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+
 [init]
-	defaultBranch = main
-[filter "lfs"]
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
-	clean = git-lfs clean -- %f
+  defaultBranch = main
+
+[commit]
+  gpgsign = true
+
+[pull]
+  rebase = false
+
 [push]
-	autoSetupRemote = true
+  autoSetupRemote = true
+
+[filter "lfs"]
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+  clean = git-lfs clean -- %f
