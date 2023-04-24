@@ -1,5 +1,7 @@
 #!/bin/zsh
 
+echo "[macos.sh](info) let's get your Mac set up 🔥"
+
 # check if 'dotfiles' was cloned into the correct directory
 if [ ! -d "${HOME}/Workspace/dotfiles" ]; then
   echo "[macos.sh](error): 'dotfiles' must be cloned into the '${HOME}/Workspace' directory"
@@ -13,12 +15,16 @@ echo "[macos.sh](info) finished installing homebrew"
 
 # install brew packages
 echo "[macos.sh](info) installing brew packages..."
-brew install autojump bat ffmpeg git gnupg jq neofetch nmap ranger ripgrep wifi-password yt-dlp
+brew install autojump bat ffmpeg git gnupg jq neofetch nmap ranger ripgrep wifi-password yt-dlp handbrake \
+  docker
 echo "[macos.sh](info) finished installing brew packages"
 
 # install brew casks
 echo "[macos.sh](info) installing brew casks..."
-brew install --cask kitty macvim nightfall raycast
+brew install --cask arc google-chrome firefox 1password spotify ticktick slack zoom google-drive \
+  exifcleaner audacity losslesscut kitty macvim visual-studio-code insomnia the-unarchiver iina raycast \
+  rectangle flux bartender veracrypt transmission cold-turkey-blocker mouse-fix nightfall teamviewer \
+  cleanshot setapp electrum ledger-live
 echo "[macos.sh](info) finished installing brew casks"
 
 # install oh-my-zsh
@@ -50,3 +56,12 @@ git clone git@github.com:richardszegh/scripts.git ${HOME}/Workspace/scripts
 chmod +x ${HOME}/Workspace/scripts/*
 source ${HOME}/.zshrc
 echo "[macos.sh](info) finished cloning and aliasing user scripts"
+
+echo "[macos.sh](info) successfully set up your Mac 🚀"
+echo "[macos.sh](warn) Note: the following apps must be installed manually:"
+echo "[macos.sh](warn)   - Your apps in Setapp"
+echo "[macos.sh](warn)   - Amphetamine"
+echo "[macos.sh](warn)   - Grammarly Desktop"
+echo "[macos.sh](warn)   - MS Office"
+echo "[macos.sh](warn)   - DaVinci Resolve"
+echo "[macos.sh](warn)   - Turbo Boost Switcher Pro"
