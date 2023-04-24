@@ -130,6 +130,9 @@ export PATH="/usr/local/opt/openjdk/bin:$PATH"
 # autojump
 [ -f $(brew --prefix)/etc/profile.d/autojump.sh ] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
+# user scripts
+export PATH="$HOME/Workspace/scripts/:$PATH"
+
 # automatically set node version via nvm
 # when changing dirs
 autoload -U add-zsh-hook
