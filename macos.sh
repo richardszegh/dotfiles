@@ -2,6 +2,9 @@
 
 echo "[macos.sh](info) let's get your Mac set up 🔥"
 
+# ask for the administrator password upfront
+sudo -v
+
 # check if 'dotfiles' was cloned into the correct directory
 if [ ! -d "${HOME}/Workspace/dotfiles" ]; then
   echo "[macos.sh](error): 'dotfiles' must be cloned into the '${HOME}/Workspace' directory"
@@ -58,6 +61,7 @@ source ${HOME}/.zshrc
 echo "[macos.sh](info) finished cloning and aliasing user scripts"
 
 echo "[macos.sh](info) successfully set up your Mac 🚀"
+echo "-"
 echo "[macos.sh](warn) Note: the following apps must be installed manually:"
 echo "[macos.sh](warn)   - Your apps in Setapp"
 echo "[macos.sh](warn)   - Amphetamine"
@@ -65,3 +69,5 @@ echo "[macos.sh](warn)   - Grammarly Desktop"
 echo "[macos.sh](warn)   - MS Office"
 echo "[macos.sh](warn)   - DaVinci Resolve"
 echo "[macos.sh](warn)   - Turbo Boost Switcher Pro"
+echo "-"
+echo "[macos.sh](warn) please restart your computer!"
