@@ -18,16 +18,17 @@ echo "[macos.sh](info) finished installing homebrew"
 
 # install brew packages
 echo "[macos.sh](info) installing brew packages..."
-brew install autojump bat ffmpeg git gnupg jq neofetch nmap ranger ripgrep wifi-password yt-dlp handbrake \
-  docker
+brew install autojump bat docker ffmpeg git gnupg handbrake httpie jq neofetch nmap ranger ripgrep \
+  rsync speedtest-cli stripe wifi-password yt-dlp
 echo "[macos.sh](info) finished installing brew packages"
 
 # install brew casks
 echo "[macos.sh](info) installing brew casks..."
-brew install --cask arc google-chrome firefox 1password spotify ticktick slack zoom google-drive \
-  exifcleaner audacity losslesscut kitty macvim visual-studio-code insomnia the-unarchiver iina raycast \
-  rectangle flux bartender veracrypt transmission cold-turkey-blocker mouse-fix nightfall teamviewer \
-  cleanshot setapp electrum ledger-live
+brew install --cask arc 1password spotify sunsama slack loom zoom google-drive \
+  figma exifcleaner audacity losslesscut \
+  warp macvim visual-studio-code insomnia \
+  the-unarchiver transmission veracrypt mouse-fix flux rectangle cleanshot nightfall raycast cold-turkey-blocker \
+  setapp
 echo "[macos.sh](info) finished installing brew casks"
 
 # install oh-my-zsh
@@ -63,11 +64,19 @@ echo "[macos.sh](info) finished cloning and aliasing user scripts"
 echo "[macos.sh](info) successfully set up your Mac 🚀"
 echo "-"
 echo "[macos.sh](warn) Note: the following apps must be installed manually:"
-echo "[macos.sh](warn)   - Your apps in Setapp"
-echo "[macos.sh](warn)   - Amphetamine"
-echo "[macos.sh](warn)   - Grammarly Desktop"
-echo "[macos.sh](warn)   - MS Office"
+echo "[macos.sh](warn)   - Rise Calendar"
+echo "[macos.sh](warn)   - Tot"
 echo "[macos.sh](warn)   - DaVinci Resolve"
-echo "[macos.sh](warn)   - Turbo Boost Switcher Pro"
+echo "[macos.sh](warn)   - GitHub Desktop"
+echo "[macos.sh](warn)   - Bezel"
+echo "[macos.sh](warn)   - Texts, Telegram, WhatsApp etc."
+echo "[macos.sh](warn)   - Infuse"
+echo "[macos.sh](warn)   - Amphetamine"
+echo "[macos.sh](warn)   - Toggl Track"
+echo "[macos.sh](warn)   - Grammarly"
+echo "[macos.sh](warn)   - Your apps in Setapp"
+echo "[macos.sh](warn)   - Drivers (Logitech etc.)"
+echo "[macos.sh](warn)   - VPN, Jellyfin"
+echo "[macos.sh](warn)   - Browser Extensions: 1Password, Cold Turkey Blocker, Disable Automatic Gain Control, I still don't care about cookies, Kagi Search, News Feed Eridicator, Old Reddit Redirect, React Developer Tools, Readwise, RES, uBlock Origin, Universal Trakt Scrollber"
 echo "-"
 echo "[macos.sh](warn) please restart your computer!"
