@@ -119,6 +119,10 @@ alias nrb="npm run build"
 
 alias icat="kitty +kitten icat"
 
+alias dcud="docker compose up -d"
+alias dcu="docker compose up"
+alias dcd="docker compose down"
+
 # nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
