@@ -39,13 +39,13 @@ brew install --cask arc 1password spotify sunsama slack loom zoom google-drive \
   figma exifcleaner audacity handbrake losslesscut \
   visual-studio-code docker insomnia \
   obsidian \
-  the-unarchiver transmission veracrypt mouse-fix flux rectangle cleanshot nightfall raycast cold-turkey-blocker pika \
+  the-unarchiver transmission veracrypt mac-mouse-fix flux rectangle cleanshot nightfall raycast cold-turkey-blocker pika \
   setapp
 echo "[macos.sh](info) finished installing brew casks"
 
 # install oh-my-zsh
-echo "[macos.sh](info) installing oh-my-zsh..."
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+# echo "[macos.sh](info) installing oh-my-zsh..."
+# /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 zshrc = "${HOME}/.zshrc"
 if [ -e "$zshrc" ]; then
   rm "$zshrc"
