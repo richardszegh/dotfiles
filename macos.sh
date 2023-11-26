@@ -92,5 +92,6 @@ echo "[macos.sh](warn)   - Browser Extensions: 1Password, Clickbait Remover for 
 echo "-"
 echo "[macos.sh](warn) Optional:"
 echo "[macos.sh](warn)   - install programming fonts"
+echo "[macos.sh](warn)   - install apps & tools from Gumroad (https://app.gumroad.com/library)"
 echo "-"
 echo "[macos.sh](warn) please restart your computer!"
