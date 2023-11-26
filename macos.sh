@@ -92,6 +92,15 @@ else
     echo "[macos.sh](info) removed default '~/.ssh/config'"
   fi
 fi
+if [ ! -d "${HOME}/.config/kitty" ]; then
+  mkdir -p "${HOME}/.config/kitty"
+  echo "[macos.sh](info) created '~/.config/kitty' folder, because it did not exist"
+else
+  if [ -e "${HOME}/.config/kitty/kitty.conf" ]; then
+    rm "${HOME}/.config/kitty/kitty.conf"
+    echo "[macos.sh](info) removed default '~/.config/kitty/kitty.conf'"
+  fi
+fi
 
 # (7/9) alias dotfiles
 echo "[macos.sh](info) creating aliases for all dotfiles..."
@@ -99,6 +108,7 @@ ln -s "${HOME}/Workspace/dotfiles/.zshrc" "${HOME}/.zshrc"
 ln -s "${HOME}/Workspace/dotfiles/.vimrc" "${HOME}/.vimrc"
 ln -s "${HOME}/Workspace/dotfiles/.gitconfig" "${HOME}/.gitconfig"
 ln -s "${HOME}/Workspace/dotfiles/.ssh/config" "${HOME}/.ssh/config"
+ln -s "${HOME}/Workspace/dotfiles/.config/kitty/kitty.conf" "${HOME}/.config/kitty/kitty.conf"
 echo "[macos.sh](info) finished creating aliases for all dotfiles"
 
 # (8/9) clone and alias scripts
