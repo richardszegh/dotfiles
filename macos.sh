@@ -49,8 +49,7 @@ if [ -d "${HOME}/.oh-my-zsh" ]; then
   echo "[macos.sh](info) oh-my-zsh is already installed, skipping..."
 else
   echo "[macos.sh](info) installing oh-my-zsh..."
-  ## bug: after installation, the process exit causes `macos.sh` to exit too
-  # /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
   echo "[macos.sh](info) finished installing oh-my-zsh"
   echo "[macos.sh](info) installing oh-my-zsh plugins..."
   echo "[macos.sh](info) installing zsh-autosuggestions..."
