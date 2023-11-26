@@ -39,7 +39,7 @@ brew install --cask arc firefox 1password spotify sunsama fantastical slack loom
   figma exifcleaner audacity handbrake losslesscut \
   kitty visual-studio-code docker insomnia bezel \
   obsidian \
-  the-unarchiver transmission veracrypt mac-mouse-fix flux rectangle cleanshot nightfall raycast cold-turkey-blocker grammarly pika \
+  the-unarchiver transmission veracrypt mac-mouse-fix flux rectangle cleanshot nightfall raycast cold-turkey-blocker pika \
   setapp \
   telegram whatsapp
 echo "[macos.sh](info) finished installing brew casks"
@@ -119,7 +119,7 @@ echo "[macos.sh](info) successfully set up your Mac 🚀"
 echo "-"
 echo "[macos.sh](warn) Note: the following apps must be installed manually:"
 echo "[macos.sh](warn)   - DaVinci Resolve"
-echo "[macos.sh](warn)   - Infuse, Amphetamine, Toggl Track"
+echo "[macos.sh](warn)   - Infuse, Amphetamine, Toggl Track, Grammarly"
 echo "[macos.sh](warn)   - Your apps in Setapp"
 echo "[macos.sh](warn)   - Drivers (Logitech etc.)"
 echo "[macos.sh](warn)   - VPN, Jellyfin, Crypto Wallets"
