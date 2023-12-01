@@ -82,6 +82,15 @@ if [ -e "${HOME}/.gitconfig" ]; then
   rm "${HOME}/.gitconfig"
   echo "[macos.sh](info) removed default '.gitconfig'"
 fi
+if [ ! -d "${HOME}/atg" ]; then
+  mkdir -p "${HOME}/atg"
+  echo "[macos.sh](info) created '~/atg' folder, because it did not exist"
+else
+  if [ -e "${HOME}/atg/.gitconfig" ]; then
+    rm "${HOME}/atg/.gitconfig"
+    echo "[macos.sh](info) removed default '~/atg/.gitconfig'"
+  fi
+fi
 if [ ! -d "${HOME}/.ssh" ]; then
   mkdir -p "${HOME}/.ssh"
   echo "[macos.sh](info) created '~/.ssh' folder, because it did not exist"
@@ -106,6 +115,7 @@ echo "[macos.sh](info) creating aliases for all dotfiles..."
 ln -s "${HOME}/Workspace/dotfiles/.zshrc" "${HOME}/.zshrc"
 ln -s "${HOME}/Workspace/dotfiles/.vimrc" "${HOME}/.vimrc"
 ln -s "${HOME}/Workspace/dotfiles/.gitconfig" "${HOME}/.gitconfig"
+ln -s "${HOME}/Workspace/dotfiles/atg/.gitconfig" "${HOME}/atg/.gitconfig"
 ln -s "${HOME}/Workspace/dotfiles/.ssh/config" "${HOME}/.ssh/config"
 ln -s "${HOME}/Workspace/dotfiles/.config/kitty/kitty.conf" "${HOME}/.config/kitty/kitty.conf"
 echo "[macos.sh](info) finished creating aliases for all dotfiles"
