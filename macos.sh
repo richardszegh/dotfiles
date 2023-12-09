@@ -37,7 +37,7 @@ echo "[macos.sh](info) finished installing brew packages"
 echo "[macos.sh](info) installing brew casks..."
 brew install --cask arc firefox 1password spotify sunsama fantastical slack loom zoom google-drive \
   figma exifcleaner audacity handbrake losslesscut \
-  kitty visual-studio-code docker insomnia bezel \
+  kitty visual-studio-code docker insomnia \
   obsidian \
   the-unarchiver transmission veracrypt mac-mouse-fix flux rectangle cleanshot nightfall raycast cold-turkey-blocker pika \
   setapp \
@@ -138,11 +138,11 @@ echo "[macos.sh](info) successfully set up your Mac 🚀"
 echo "-"
 echo "[macos.sh](warn) Note: the following apps must be installed manually:"
 echo "[macos.sh](warn)   - DaVinci Resolve"
-echo "[macos.sh](warn)   - Infuse, Amphetamine, Toggl Track, Grammarly"
+echo "[macos.sh](warn)   - Infuse, Amphetamine, Toggl Track"
 echo "[macos.sh](warn)   - Your apps in Setapp"
 echo "[macos.sh](warn)   - Drivers (Logitech etc.)"
 echo "[macos.sh](warn)   - VPN, Jellyfin, Crypto Wallets"
-echo "[macos.sh](warn)   - Browser Extensions: 1Password, Clickbait Remover for Youtube, Cold Turkey Blocker, Disable Automatic Gain Control, Fake Filler, Hide YouTube Thumbnails, I still don't care about cookies, Kagi Search, News Feed Eridicator, React Developer Tools, Readwise, uBlock Origin, Unhook, Universal Trakt Scrollber"
+echo "[macos.sh](warn)   - Browser Extensions: 1Password, Clickbait Remover for Youtube, Cold Turkey Blocker, Fake Filler, Hide YouTube Thumbnails, I still don't care about cookies, Kagi Search, News Feed Eridicator, React Developer Tools, Readwise, uBlock Origin, Unhook, Universal Trakt Scrollber"
 echo "-"
 echo "[macos.sh](warn) Optional:"
 echo "[macos.sh](warn)   - install programming fonts"
