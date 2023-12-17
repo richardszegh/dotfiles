@@ -39,7 +39,7 @@ brew install --cask arc firefox 1password spotify sunsama fantastical slack loom
   figma exifcleaner audacity handbrake losslesscut \
   kitty visual-studio-code docker insomnia \
   obsidian \
-  the-unarchiver transmission veracrypt mac-mouse-fix flux rectangle cleanshot nightfall raycast cold-turkey-blocker pika \
+  the-unarchiver transmission veracrypt flux rectangle cleanshot nightfall raycast cold-turkey-blocker pika \
   setapp \
   telegram whatsapp
 echo "[macos.sh](info) finished installing brew casks"
