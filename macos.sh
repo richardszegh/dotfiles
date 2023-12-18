@@ -37,7 +37,7 @@ echo "[macos.sh](info) finished installing brew packages"
 echo "[macos.sh](info) installing brew casks..."
 brew install --cask arc firefox 1password spotify sunsama fantastical slack loom zoom google-drive \
   figma exifcleaner audacity handbrake losslesscut \
-  kitty visual-studio-code docker insomnia \
+  kitty visual-studio-code orbstack insomnia \
   obsidian \
   the-unarchiver transmission veracrypt flux rectangle cleanshot nightfall raycast cold-turkey-blocker pika \
   setapp \
