@@ -29,7 +29,7 @@ fi
 
 # (2/9) install brew packages
 echo "[macos.sh](info) installing brew packages..."
-brew install autojump bat ffmpeg fd git gnupg httpie jq nmap ranger ripgrep \
+brew install autojump bat ffmpeg fd git gh gnupg httpie jq nmap ranger ripgrep \
   rsync tldr wifi-password yt-dlp
 echo "[macos.sh](info) finished installing brew packages"
 
