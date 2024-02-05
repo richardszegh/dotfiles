@@ -35,7 +35,7 @@ echo "[macos.sh](info) finished installing brew packages"
 
 # (3/9) install brew casks
 echo "[macos.sh](info) installing brew casks..."
-brew install --cask brave-browser firefox 1password spotify sunsama fantastical thunderbird slack loom zoom google-drive \
+brew install --cask brave-browser firefox 1password tidal sunsama fantastical thunderbird slack loom zoom google-drive \
   figma exifcleaner audacity handbrake losslesscut \
   kitty visual-studio-code orbstack insomnia \
   obsidian \
@@ -142,7 +142,7 @@ echo "[macos.sh](warn)   - Infuse, Amphetamine"
 echo "[macos.sh](warn)   - Your apps in Setapp"
 echo "[macos.sh](warn)   - Drivers (Logitech etc.)"
 echo "[macos.sh](warn)   - VPN, Jellyfin, Synergy"
-echo "[macos.sh](warn)   - Browser Extensions: 1Password, Clickbait Remover for Youtube, Cold Turkey Blocker, Fake Filler, Hide YouTube Thumbnails, I still don't care about cookies, Kagi Search, News Feed Eridicator, React Developer Tools, Readwise, uBlock Origin, Unhook, Universal Trakt Scrollber"
+echo "[macos.sh](warn)   - Browser Extensions: 1Password, Clickbait Remover for Youtube, Dark Reader, Cold Turkey Blocker, Hide YouTube Thumbnails, I still don't care about cookies, JSONView, News Feed Eridicator, React Developer Tools, Readwise Highlighter, Redux DevTools, Sponsorblock, Tabliss, uBlock Origin, Unhook"
 echo "-"
 echo "[macos.sh](warn) Optional:"
 echo "[macos.sh](warn)   - install programming fonts"
