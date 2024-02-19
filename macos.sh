@@ -30,7 +30,7 @@ fi
 # (2/9) install brew packages
 echo "[macos.sh](info) installing brew packages..."
 brew install autojump bat diff-so-fancy ffmpeg fd git gh gnupg httpie jq nmap ranger ripgrep \
-  rsync tldr wifi-password yt-dlp pipenv pyenv
+  rsync tldr thefuck wifi-password yt-dlp pipenv pyenv
 echo "[macos.sh](info) finished installing brew packages"
 
 # (3/9) install brew casks
