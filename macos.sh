@@ -41,7 +41,8 @@ brew install --cask brave-browser firefox 1password tidal pocket-casts sunsama f
   obsidian \
   the-unarchiver transmission veracrypt flux rectangle cleanshot nightfall raycast cold-turkey-blocker pika \
   setapp \
-  telegram whatsapp
+  telegram whatsapp \
+  soulseek xld musicbrainz-picard
 echo "[macos.sh](info) finished installing brew casks"
 
 # (4/9) install oh-my-zsh
