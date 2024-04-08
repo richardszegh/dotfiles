@@ -29,13 +29,13 @@ fi
 
 # (2/9) install brew packages
 echo "[macos.sh](info) installing brew packages..."
-brew install autojump bat diff-so-fancy ffmpeg fd git gh gnupg httpie jq nmap ranger ripgrep \
-  rsync tldr thefuck wifi-password yt-dlp pipenv pyenv
+brew install autojump bat diff-so-fancy ffmpeg fd git gh gnupg httpie jq nmap ranger \
+  restic ripgrep rsync tldr thefuck wifi-password yt-dlp pipenv pyenv
 echo "[macos.sh](info) finished installing brew packages"
 
 # (3/9) install brew casks
 echo "[macos.sh](info) installing brew casks..."
-brew install --cask brave-browser firefox 1password pocket-casts sunsama fantastical thunderbird slack loom zoom google-drive \
+brew install --cask brave-browser firefox 1password foobar2000 spotify pocket-casts sunsama fantastical thunderbird slack loom zoom google-drive \
   figma exifcleaner audacity handbrake losslesscut \
   kitty visual-studio-code orbstack insomnia \
   obsidian \
