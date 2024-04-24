@@ -22,6 +22,12 @@
   "buffer_font_size": 20,
   "ui_font_family": "Dank Mono",
   "buffer_font_family": "Dank Mono",
+  "ui_font_features": {
+    "liga": false
+  },
+  "buffer_font_features": {
+    "liga": false
+  },
   "terminal": {
     "font_size": 18,
     "font_family": "Hack",
