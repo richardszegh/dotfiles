@@ -117,6 +117,11 @@ alias nrs="npm run start"
 alias nrd="npm run develop"
 alias nrb="npm run build"
 
+alias bi="bun install"
+alias brs="bun run start"
+alias brd="bun run develop"
+alias brb="bun run build"
+
 alias icat="kitty +kitten icat"
 
 alias dcud="docker compose up -d"
