@@ -1,0 +1,7 @@
+[
+  {
+    "bindings": {
+      "cmd-shift-backspace": "project_panel::CollapseAllEntries"
+    }
+  }
+]

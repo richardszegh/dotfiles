@@ -30,14 +30,14 @@ fi
 # (2/9) install brew packages
 echo "[macos.sh](info) installing brew packages..."
 brew install autojump bat diff-so-fancy ffmpeg fd git gh gnupg httpie jq nmap ranger \
-  restic ripgrep rsync tldr thefuck wifi-password yt-dlp pipenv pyenv
+  restic ripgrep rsync spek tldr thefuck wifi-password wireshark yt-dlp pipenv pyenv
 echo "[macos.sh](info) finished installing brew packages"
 
 # (3/9) install brew casks
 echo "[macos.sh](info) installing brew casks..."
 brew install --cask google-chrome firefox 1password foobar2000 spotify pocket-casts sunsama fantastical thunderbird slack loom zoom google-drive \
   figma exifcleaner audacity handbrake losslesscut \
-  kitty visual-studio-code orbstack insomnia \
+  kitty visual-studio-code zed orbstack insomnia \
   obsidian \
   the-unarchiver transmission veracrypt flux rectangle cleanshot nightfall raycast cold-turkey-blocker pika \
   setapp \
@@ -110,6 +110,20 @@ else
     echo "[macos.sh](info) removed default '~/.config/kitty/kitty.conf'"
   fi
 fi
+if [ ! -d "${HOME}/.config/zed" ]; then
+  mkdir -p "${HOME}/.config/zed"
+  echo "[macos.sh](info) created '~/.config/zed' folder, because it did not exist"
+else
+  if [ -e "${HOME}/.config/zed/settings.json" ]; then
+    rm "${HOME}/.config/zed/settings.json"
+    echo "[macos.sh](info) removed default '~/.config/zed/settings.json'"
+  fi
+  if [ -e "${HOME}/.config/zed/keymap.json" ]; then
+    rm "${HOME}/.config/zed/keymap.json"
+    echo "[macos.sh](info) removed default '~/.config/zed/keymap.json'"
+  fi
+fi
+
 
 # (7/9) alias dotfiles
 echo "[macos.sh](info) creating aliases for all dotfiles..."
@@ -119,6 +133,8 @@ ln -s "${HOME}/Workspace/dotfiles/.gitconfig" "${HOME}/.gitconfig"
 ln -s "${HOME}/Workspace/dotfiles/atg/.gitconfig" "${HOME}/atg/.gitconfig"
 ln -s "${HOME}/Workspace/dotfiles/.ssh/config" "${HOME}/.ssh/config"
 ln -s "${HOME}/Workspace/dotfiles/.config/kitty/kitty.conf" "${HOME}/.config/kitty/kitty.conf"
+ln -s "${HOME}/Workspace/dotfiles/.config/zed/settings.json" "${HOME}/.config/zed/settings.json"
+ln -s "${HOME}/Workspace/dotfiles/.config/zed/keymap.json" "${HOME}/.config/zed/keymap.json"
 echo "[macos.sh](info) finished creating aliases for all dotfiles"
 
 # (8/9) clone and alias scripts
@@ -143,10 +159,9 @@ echo "[macos.sh](warn)   - Infuse, Amphetamine"
 echo "[macos.sh](warn)   - Your apps in Setapp"
 echo "[macos.sh](warn)   - Drivers (Logitech etc.)"
 echo "[macos.sh](warn)   - VPN, Jellyfin, Synergy"
-echo "[macos.sh](warn)   - Browser Extensions: 1Password, Clickbait Remover for Youtube, Dark Reader, Cold Turkey Blocker, Hide YouTube Thumbnails, I still don't care about cookies, JSONView, News Feed Eridicator, React Developer Tools, Readwise Highlighter, Redux DevTools, Sponsorblock, Tabliss, uBlock Origin, Unhook"
+echo "[macos.sh](warn)   - Browser Extensions: 1Password, Clickbait Remover for Youtube, Dark Reader, Cold Turkey Blocker, Hide YouTube Thumbnails, I still don't care about cookies, JSONView, News Feed Eridicator, React Developer Tools, Readwise Highlighter, Redux DevTools, Sponsorblock, uBlacklist, uBlock Origin, Unhook, Universal Trakt Scrobbler"
 echo "-"
 echo "[macos.sh](warn) Optional:"
-echo "[macos.sh](warn)   - install programming fonts"
 echo "[macos.sh](warn)   - install apps & tools from Gumroad (https://app.gumroad.com/library)"
 echo "-"
 echo "[macos.sh](warn) please restart your computer!"
