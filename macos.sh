@@ -30,18 +30,18 @@ fi
 # (2/9) install brew packages
 echo "[macos.sh](info) installing brew packages..."
 brew install autojump bat diff-so-fancy ffmpeg fd git gh gnupg httpie jq nmap ranger \
-  restic ripgrep rsync spek tldr thefuck wifi-password wireshark yt-dlp pipenv pyenv
+  restic ripgrep rsync spek tldr thefuck wifi-password yt-dlp pipenv pyenv
 echo "[macos.sh](info) finished installing brew packages"
 
 # (3/9) install brew casks
 echo "[macos.sh](info) installing brew casks..."
 brew install --cask google-chrome firefox 1password spotify pocket-casts sunsama fantastical thunderbird slack loom zoom google-drive \
   figma exifcleaner audacity handbrake losslesscut \
-  kitty visual-studio-code zed orbstack insomnia \
+  kitty visual-studio-code zed orbstack insomnia wireshark \
   obsidian \
-  the-unarchiver transmission veracrypt flux rectangle cleanshot nightfall raycast cold-turkey-blocker pika \
-  setapp \
-  telegram whatsapp \
+  the-unarchiver transmission veracrypt flux rectangle cleanshot nightfall raycast pika cold-turkey-blocker \
+  balance-lock maccy istat-menus bartender bettertouchtool \
+  telegram \
   soulseek xld musicbrainz-picard
 echo "[macos.sh](info) finished installing brew casks"
 
@@ -156,10 +156,10 @@ echo "-"
 echo "[macos.sh](warn) Note: the following apps must be installed manually:"
 echo "[macos.sh](warn)   - DaVinci Resolve"
 echo "[macos.sh](warn)   - Infuse, Amphetamine"
-echo "[macos.sh](warn)   - Your apps in Setapp"
 echo "[macos.sh](warn)   - Drivers (Logitech etc.)"
-echo "[macos.sh](warn)   - VPN, Jellyfin, Synergy"
-echo "[macos.sh](warn)   - Browser Extensions: 1Password, Clickbait Remover for Youtube, Dark Reader, Cold Turkey Blocker, Hide YouTube Thumbnails, I still don't care about cookies, JSONView, News Feed Eridicator, React Developer Tools, Readwise Highlighter, Redux DevTools, Sponsorblock, uBlacklist, uBlock Origin, Unhook, Universal Trakt Scrobbler"
+echo "[macos.sh](warn)   - Kindle, Send to Kindle, GoToMeeting"
+echo "[macos.sh](warn)   - VPN, Jellyfin, Synergy, REW"
+echo "[macos.sh](warn)   - Browser Extensions: 1Password, Clickbait Remover for Youtube, Dark Reader, Cold Turkey Blocker, Hide YouTube Thumbnails, I still don't care about cookies, JSONView, News Feed Eridicator, React Developer Tools, Readwise Highlighter, Redirector, Redux DevTools, Sponsorblock, uBlacklist, uBlock Origin, Unhook, Universal Trakt Scrobbler"
 echo "-"
 echo "[macos.sh](warn) Optional:"
 echo "[macos.sh](warn)   - install apps & tools from Gumroad (https://app.gumroad.com/library)"
