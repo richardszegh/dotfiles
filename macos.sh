@@ -123,6 +123,27 @@ else
     echo "[macos.sh](info) removed default '~/.config/zed/keymap.json'"
   fi
 fi
+if [ ! -d "${HOME}/.doom.d" ]; then
+  mkdir -p "${HOME}/.doom.d"
+  echo "[macos.sh](info) created '~/.doom.d' folder, because it did not exist"
+else
+  if [ -e "${HOME}/.doom.d/init.el" ]; then
+    rm "${HOME}/.doom.d/init.el"
+    echo "[macos.sh](info) removed default '~/.doom.d/init.el'"
+  fi
+  if [ -e "${HOME}/.doom.d/config.el" ]; then
+    rm "${HOME}/.doom.d/config.el"
+    echo "[macos.sh](info) removed default '~/.doom.d/config.el'"
+  fi
+  if [ -e "${HOME}/.doom.d/packages.el" ]; then
+    rm "${HOME}/.doom.d/packages.el"
+    echo "[macos.sh](info) removed default '~/.doom.d/packages.el'"
+  fi
+  if [ -e "${HOME}/.doom.d/custom.el" ]; then
+    rm "${HOME}/.doom.d/custom.el"
+    echo "[macos.sh](info) removed default '~/.doom.d/custom.el'"
+  fi
+fi
 
 
 # (7/11) alias dotfiles
@@ -135,6 +156,10 @@ ln -s "${HOME}/Workspace/dotfiles/.ssh/config" "${HOME}/.ssh/config"
 ln -s "${HOME}/Workspace/dotfiles/.config/kitty/kitty.conf" "${HOME}/.config/kitty/kitty.conf"
 ln -s "${HOME}/Workspace/dotfiles/.config/zed/settings.json" "${HOME}/.config/zed/settings.json"
 ln -s "${HOME}/Workspace/dotfiles/.config/zed/keymap.json" "${HOME}/.config/zed/keymap.json"
+ln -s "${HOME}/Workspace/dotfiles/.doom.d/init.el" "${HOME}/.doom.d/init.el"
+ln -s "${HOME}/Workspace/dotfiles/.doom.d/config.el" "${HOME}/.doom.d/config.el"
+ln -s "${HOME}/Workspace/dotfiles/.doom.d/packages.el" "${HOME}/.doom.d/packages.el"
+ln -s "${HOME}/Workspace/dotfiles/.doom.d/custom.el" "${HOME}/.doom.d/custom.el"
 echo "[macos.sh](info) finished creating aliases for all dotfiles"
 
 # (8/11) clone and alias scripts
