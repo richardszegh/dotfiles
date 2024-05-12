@@ -74,3 +74,7 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+(after! evil
+	(evil-ex-define-cmd "wq" 'doom/save-and-kill-buffer)
+	(evil-ex-define-cmd "q" 'kill-this-buffer)
+)
