@@ -145,7 +145,6 @@ else
   fi
 fi
 
-
 # (7/11) alias dotfiles
 echo "[macos.sh](info) creating aliases for all dotfiles..."
 ln -s "${HOME}/Workspace/dotfiles/.zshrc" "${HOME}/.zshrc"
@@ -178,7 +177,13 @@ echo "[macos.sh](info) finished installing fonts"
 echo "[macos.sh](info) installing emacs..."
 brew tap railwaycat/emacsmacport
 brew install emacs-mac --with-modules
-ln -s /opt/homebrew/opt/emacs-mac/Emacs.app ~/Applications/Emacs.app
+ln -s /usr/local/opt/emacs-mac/Emacs.app /Applications/Emacs.app
+#
+# On some systems, the below line might be required instead of the above:
+# (might be due to the way system permissions are set up in MacOS)
+#
+# ln -s /opt/homebrew/opt/emacs-mac/Emacs.app ~/Applications/Emacs.app
+#
 echo "[macos.sh](info) finished installing emacs"
 
 # (11/11)
@@ -192,7 +197,7 @@ source ${HOME}/.zshrc
 echo "[macos.sh](info) successfully set up your Mac 🚀"
 echo "-"
 echo "[macos.sh](warn) Note: the following apps must be installed manually:"
-echo "[macos.sh](warn)   - Xcode Command Line Tools (`xcode-select --install`)"
+echo "[macos.sh](warn)   - Xcode Command Line Tools ($(xcode-select --install))"
 echo "[macos.sh](warn)   - DaVinci Resolve"
 echo "[macos.sh](warn)   - Infuse, Amphetamine"
 echo "[macos.sh](warn)   - Drivers (Logitech etc.)"
