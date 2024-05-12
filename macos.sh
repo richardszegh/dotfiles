@@ -66,7 +66,7 @@ if [ -d "${HOME}/.nvm" ]; then
   echo "[macos.sh](info) NVM is already installed, skipping..."
 else
   echo "[macos.sh](info) installing NVM..."
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh)"
   echo "[macos.sh](info) finished installing NVM"
 fi
 
