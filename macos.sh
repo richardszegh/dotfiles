@@ -18,7 +18,7 @@ if [ ! -d "${HOME}/Workspace/dotfiles" ]; then
   exit 1
 fi
 
-# (1/9) install homebrew
+# (1/11) install homebrew
 if command -v brew &>/dev/null; then
   echo "[macos.sh](info) homebrew is already installed, skipping..."
 else
@@ -27,13 +27,13 @@ else
   echo "[macos.sh](info) finished installing homebrew"
 fi
 
-# (2/9) install brew packages
+# (2/11) install brew packages
 echo "[macos.sh](info) installing brew packages..."
-brew install autojump bat diff-so-fancy ffmpeg fd git gh gnupg httpie jq nmap ranger \
+brew install autojump bat coreutils diff-so-fancy ffmpeg fd git gh gnupg httpie jq nmap ranger \
   restic ripgrep rsync spek tldr thefuck wifi-password yt-dlp pipenv pyenv
 echo "[macos.sh](info) finished installing brew packages"
 
-# (3/9) install brew casks
+# (3/11) install brew casks
 echo "[macos.sh](info) installing brew casks..."
 brew install --cask google-chrome firefox 1password spotify pocket-casts sunsama fantastical thunderbird slack loom zoom google-drive \
   figma exifcleaner audacity handbrake losslesscut \
@@ -45,7 +45,7 @@ brew install --cask google-chrome firefox 1password spotify pocket-casts sunsama
   soulseek xld musicbrainz-picard
 echo "[macos.sh](info) finished installing brew casks"
 
-# (4/9) install oh-my-zsh
+# (4/11) install oh-my-zsh
 if [ -d "${HOME}/.oh-my-zsh" ]; then
   echo "[macos.sh](info) oh-my-zsh is already installed, skipping..."
 else
@@ -61,7 +61,7 @@ else
   echo "[macos.sh](info) finished installing zsh-syntax-highlighting"
 fi
 
-# (5/9) install NVM
+# (5/11) install NVM
 if [ -d "${HOME}/.nvm" ]; then
   echo "[macos.sh](info) NVM is already installed, skipping..."
 else
@@ -70,7 +70,7 @@ else
   echo "[macos.sh](info) finished installing NVM"
 fi
 
-# (6/9) remove default dotfiles
+# (6/11) remove default dotfiles
 if [ -e "${HOME}/.zshrc" ]; then
   rm "${HOME}/.zshrc"
   echo "[macos.sh](info) removed default '.zshrc'"
@@ -125,7 +125,7 @@ else
 fi
 
 
-# (7/9) alias dotfiles
+# (7/11) alias dotfiles
 echo "[macos.sh](info) creating aliases for all dotfiles..."
 ln -s "${HOME}/Workspace/dotfiles/.zshrc" "${HOME}/.zshrc"
 ln -s "${HOME}/Workspace/dotfiles/.vimrc" "${HOME}/.vimrc"
@@ -137,23 +137,37 @@ ln -s "${HOME}/Workspace/dotfiles/.config/zed/settings.json" "${HOME}/.config/ze
 ln -s "${HOME}/Workspace/dotfiles/.config/zed/keymap.json" "${HOME}/.config/zed/keymap.json"
 echo "[macos.sh](info) finished creating aliases for all dotfiles"
 
-# (8/9) clone and alias scripts
+# (8/11) clone and alias scripts
 echo "[macos.sh](info) cloning and aliasing user scripts..."
 git clone https://github.com/richardszegh/scripts ${HOME}/Workspace/scripts
 chmod +x ${HOME}/Workspace/scripts/*
 echo "[macos.sh](info) finished cloning and aliasing user scripts"
 
-# (9/9)
+# (9/11)
 echo "[macos.sh](info) installing fonts..."
 brew tap homebrew/cask-fonts
 brew install font-hack
 echo "[macos.sh](info) finished installing fonts"
+
+# (10/11)
+echo "[macos.sh](info) installing emacs..."
+brew tap railwaycat/emacsmacport
+brew install emacs-mac --with-modules
+ln -s /opt/homebrew/opt/emacs-mac/Emacs.app ~/Applications/Emacs.app
+echo "[macos.sh](info) finished installing emacs"
+
+# (11/11)
+echo "[macos.sh](info) installing doomemacs..."
+git clone https://github.com/hlissner/doom-emacs ~/.emacs.d
+~/.emacs.d/bin/doom install
+echo "[macos.sh](info) finished installing doomemacs"
 
 source ${HOME}/.zshrc
 
 echo "[macos.sh](info) successfully set up your Mac 🚀"
 echo "-"
 echo "[macos.sh](warn) Note: the following apps must be installed manually:"
+echo "[macos.sh](warn)   - Xcode Command Line Tools (`xcode-select --install`)"
 echo "[macos.sh](warn)   - DaVinci Resolve"
 echo "[macos.sh](warn)   - Infuse, Amphetamine"
 echo "[macos.sh](warn)   - Drivers (Logitech etc.)"
