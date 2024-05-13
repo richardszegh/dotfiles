@@ -78,3 +78,16 @@
 	(evil-ex-define-cmd "wq" 'doom/save-and-kill-buffer)
 	(evil-ex-define-cmd "q" 'kill-this-buffer)
 )
+
+(after! treemacs
+	(defun treemacs--force-git-update-current-file ()
+		(-let [file (treemacs-canonical-path buffer-file-name)]
+			(treemacs-run-in-every-buffer
+				(when (treemacs-is-path file :in-workspace)
+					(treemacs-update-single-file-git-state file)
+				)
+			)
+		)
+	)
+	(add-hook 'after-save-hook 'treemacs--force-git-update-current-file)
+)
