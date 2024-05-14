@@ -18,7 +18,7 @@ if [ ! -d "${HOME}/Workspace/dotfiles" ]; then
   exit 1
 fi
 
-# (1/11) install homebrew
+# (1/9) install homebrew
 if command -v brew &>/dev/null; then
   echo "[macos.sh](info) homebrew is already installed, skipping..."
 else
@@ -27,13 +27,13 @@ else
   echo "[macos.sh](info) finished installing homebrew"
 fi
 
-# (2/11) install brew packages
+# (2/9) install brew packages
 echo "[macos.sh](info) installing brew packages..."
 brew install autojump bat coreutils diff-so-fancy ffmpeg fd git gh gnupg httpie jq nmap ranger \
   restic ripgrep rsync spek tldr thefuck wifi-password yt-dlp pipenv pyenv
 echo "[macos.sh](info) finished installing brew packages"
 
-# (3/11) install brew casks
+# (3/9) install brew casks
 echo "[macos.sh](info) installing brew casks..."
 brew install --cask google-chrome firefox 1password spotify pocket-casts sunsama fantastical thunderbird slack loom zoom google-drive \
   figma exifcleaner audacity handbrake losslesscut \
@@ -45,7 +45,7 @@ brew install --cask google-chrome firefox 1password spotify pocket-casts sunsama
   soulseek xld musicbrainz-picard
 echo "[macos.sh](info) finished installing brew casks"
 
-# (4/11) install oh-my-zsh
+# (4/9) install oh-my-zsh
 if [ -d "${HOME}/.oh-my-zsh" ]; then
   echo "[macos.sh](info) oh-my-zsh is already installed, skipping..."
 else
@@ -61,7 +61,7 @@ else
   echo "[macos.sh](info) finished installing zsh-syntax-highlighting"
 fi
 
-# (5/11) install NVM
+# (5/9) install NVM
 if [ -d "${HOME}/.nvm" ]; then
   echo "[macos.sh](info) NVM is already installed, skipping..."
 else
@@ -70,7 +70,7 @@ else
   echo "[macos.sh](info) finished installing NVM"
 fi
 
-# (6/11) remove default dotfiles
+# (6/9) remove default dotfiles
 if [ -e "${HOME}/.zshrc" ]; then
   rm "${HOME}/.zshrc"
   echo "[macos.sh](info) removed default '.zshrc'"
@@ -123,29 +123,8 @@ else
     echo "[macos.sh](info) removed default '~/.config/zed/keymap.json'"
   fi
 fi
-if [ ! -d "${HOME}/.doom.d" ]; then
-  mkdir -p "${HOME}/.doom.d"
-  echo "[macos.sh](info) created '~/.doom.d' folder, because it did not exist"
-else
-  if [ -e "${HOME}/.doom.d/init.el" ]; then
-    rm "${HOME}/.doom.d/init.el"
-    echo "[macos.sh](info) removed default '~/.doom.d/init.el'"
-  fi
-  if [ -e "${HOME}/.doom.d/config.el" ]; then
-    rm "${HOME}/.doom.d/config.el"
-    echo "[macos.sh](info) removed default '~/.doom.d/config.el'"
-  fi
-  if [ -e "${HOME}/.doom.d/packages.el" ]; then
-    rm "${HOME}/.doom.d/packages.el"
-    echo "[macos.sh](info) removed default '~/.doom.d/packages.el'"
-  fi
-  if [ -e "${HOME}/.doom.d/custom.el" ]; then
-    rm "${HOME}/.doom.d/custom.el"
-    echo "[macos.sh](info) removed default '~/.doom.d/custom.el'"
-  fi
-fi
 
-# (7/11) alias dotfiles
+# (7/9) alias dotfiles
 echo "[macos.sh](info) creating aliases for all dotfiles..."
 ln -s "${HOME}/Workspace/dotfiles/.zshrc" "${HOME}/.zshrc"
 ln -s "${HOME}/Workspace/dotfiles/.vimrc" "${HOME}/.vimrc"
@@ -155,42 +134,19 @@ ln -s "${HOME}/Workspace/dotfiles/.ssh/config" "${HOME}/.ssh/config"
 ln -s "${HOME}/Workspace/dotfiles/.config/kitty/kitty.conf" "${HOME}/.config/kitty/kitty.conf"
 ln -s "${HOME}/Workspace/dotfiles/.config/zed/settings.json" "${HOME}/.config/zed/settings.json"
 ln -s "${HOME}/Workspace/dotfiles/.config/zed/keymap.json" "${HOME}/.config/zed/keymap.json"
-ln -s "${HOME}/Workspace/dotfiles/.doom.d/init.el" "${HOME}/.doom.d/init.el"
-ln -s "${HOME}/Workspace/dotfiles/.doom.d/config.el" "${HOME}/.doom.d/config.el"
-ln -s "${HOME}/Workspace/dotfiles/.doom.d/packages.el" "${HOME}/.doom.d/packages.el"
-ln -s "${HOME}/Workspace/dotfiles/.doom.d/custom.el" "${HOME}/.doom.d/custom.el"
 echo "[macos.sh](info) finished creating aliases for all dotfiles"
 
-# (8/11) clone and alias scripts
+# (8/9) clone and alias scripts
 echo "[macos.sh](info) cloning and aliasing user scripts..."
 git clone https://github.com/richardszegh/scripts ${HOME}/Workspace/scripts
 chmod +x ${HOME}/Workspace/scripts/*
 echo "[macos.sh](info) finished cloning and aliasing user scripts"
 
-# (9/11)
+# (9/9)
 echo "[macos.sh](info) installing fonts..."
 brew tap homebrew/cask-fonts
 brew install font-hack
 echo "[macos.sh](info) finished installing fonts"
-
-# (10/11)
-echo "[macos.sh](info) installing emacs..."
-brew tap railwaycat/emacsmacport
-brew install emacs-mac --with-modules
-ln -s /usr/local/opt/emacs-mac/Emacs.app /Applications/Emacs.app
-#
-# On some systems, the below line might be required instead of the above:
-# (might be due to the way system permissions are set up in MacOS)
-#
-# ln -s /opt/homebrew/opt/emacs-mac/Emacs.app ~/Applications/Emacs.app
-#
-echo "[macos.sh](info) finished installing emacs"
-
-# (11/11)
-echo "[macos.sh](info) installing doomemacs..."
-git clone https://github.com/hlissner/doom-emacs ~/.emacs.d
-~/.emacs.d/bin/doom install
-echo "[macos.sh](info) finished installing doomemacs"
 
 source ${HOME}/.zshrc
 
