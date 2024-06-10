@@ -40,7 +40,7 @@ brew install --cask google-chrome firefox 1password spotify pocket-casts sunsama
   kitty visual-studio-code zed orbstack insomnia wireshark \
   obsidian \
   the-unarchiver transmission veracrypt flux rectangle cleanshot nightfall raycast pika cold-turkey-blocker \
-  balance-lock maccy istat-menus bartender bettertouchtool \
+  balance-lock maccy istat-menus jordanbaird-ice bettertouchtool \
   telegram \
   soulseek xld musicbrainz-picard
 echo "[macos.sh](info) finished installing brew casks"
