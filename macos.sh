@@ -35,10 +35,10 @@ echo "[macos.sh](info) finished installing brew packages"
 
 # (3/9) install brew casks
 echo "[macos.sh](info) installing brew casks..."
-brew install --cask google-chrome firefox 1password spotify pocket-casts sunsama fantastical thunderbird slack loom zoom google-drive \
+brew install --cask google-chrome firefox 1password spotify pocket-casts \
+  sunsama fantastical slack loom zoom google-drive obsidian \
   figma exifcleaner audacity handbrake losslesscut \
   kitty visual-studio-code webstorm orbstack insomnia wireshark fork \
-  obsidian \
   the-unarchiver transmission veracrypt flux rectangle cleanshot raycast pika cold-turkey-blocker \
   balance-lock maccy istat-menus jordanbaird-ice bettertouchtool appcleaner \
   telegram \
