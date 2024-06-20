@@ -42,7 +42,7 @@ brew install --cask google-chrome firefox 1password spotify pocket-casts \
   the-unarchiver transmission veracrypt flux rectangle cleanshot raycast pika cold-turkey-blocker \
   balance-lock maccy istat-menus jordanbaird-ice bettertouchtool appcleaner \
   telegram \
-  soulseek xld musicbrainz-picard
+  soulseek xld musicbrainz-picard meta
 echo "[macos.sh](info) finished installing brew casks"
 
 # (4/9) install oh-my-zsh
