@@ -39,7 +39,7 @@ brew install --cask google-chrome firefox 1password spotify pocket-casts sunsama
   figma exifcleaner audacity handbrake losslesscut \
   kitty visual-studio-code zed orbstack insomnia wireshark \
   obsidian \
-  the-unarchiver transmission veracrypt flux rectangle cleanshot nightfall raycast pika cold-turkey-blocker \
+  the-unarchiver transmission veracrypt flux rectangle cleanshot raycast pika cold-turkey-blocker \
   balance-lock maccy istat-menus jordanbaird-ice bettertouchtool \
   telegram \
   soulseek xld musicbrainz-picard
