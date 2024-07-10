@@ -39,7 +39,7 @@ brew install --cask arc google-chrome firefox 1password spotify pocket-casts \
   sunsama fantastical slack loom zoom google-drive obsidian \
   figma exifcleaner audacity handbrake losslesscut \
   kitty visual-studio-code webstorm orbstack insomnia wireshark fork linear-linear \
-  the-unarchiver transmission veracrypt flux rectangle cleanshot raycast pika cold-turkey-blocker \
+  the-unarchiver transmission veracrypt flux rectangle cleanshot keepingyouawake raycast pika cold-turkey-blocker \
   balance-lock maccy istat-menus jordanbaird-ice bettertouchtool appcleaner \
   telegram \
   soulseek xld musicbrainz-picard meta
@@ -140,7 +140,7 @@ echo "-"
 echo "[macos.sh](warn) Note: the following apps must be installed manually:"
 echo "[macos.sh](warn)   - Xcode Command Line Tools ($(xcode-select --install))"
 echo "[macos.sh](warn)   - DaVinci Resolve"
-echo "[macos.sh](warn)   - Infuse, Amphetamine"
+echo "[macos.sh](warn)   - Infuse"
 echo "[macos.sh](warn)   - Drivers (Logitech etc.)"
 echo "[macos.sh](warn)   - Kindle, Send to Kindle, GoToMeeting"
 echo "[macos.sh](warn)   - VPN, Jellyfin, Synergy, REW"
