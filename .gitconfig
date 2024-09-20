@@ -1,6 +1,6 @@
 [user]
   name = Richard Szegh
-  email = rich@richardszegh.com
+  email = richard@richardszegh.com
   signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMf3BimpDK51+UPAGRyuJVnfsX5fMFEV9aa5TSFGw8qR
 
 [includeIf "gitdir:~/Workspace/atg/"]
