@@ -1,0 +1,107 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from t20
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "telemetry": {
+    "metrics": false,
+    "diagnostics": true
+  },
+  "ui_font_size": 16,
+  "buffer_font_size": 20,
+  "buffer_line_height": {
+    "custom": 1.718
+  },
+  "buffer_font_features": {
+    "calt": false
+  },
+  "ui_font_features": {
+    "calt": false
+  },
+  "theme": {
+    "mode": "system",
+    "light": "Atelier Forest Light",
+    "dark": "Sandcastle"
+  },
+  "confirm_quit": true,
+  "tabs": {
+    "git_status": true
+  },
+  "git": {
+    "inline_blame": {
+      "enabled": false,
+      "delay_ms": 10000
+    }
+  },
+  "assistant": {
+    "version": "2",
+    "enabled": false
+  },
+  "chat_panel": {
+    "button": false
+  },
+  "collaboration_panel": {
+    "button": false
+  },
+  "features": {
+    "inline_completion_provider": "none",
+    "copilot": false
+  },
+  "terminal": {
+    "dock": "right",
+    "font_size": 16
+  },
+  "remove_trailing_whitespace_on_save": true,
+  "ensure_final_newline_on_save": true,
+  "hard_tabs": false,
+  "format_on_save": "on",
+  "formatter": {
+    "external": {
+      "command": "node_modules/.bin/prettier",
+      "arguments": [
+        "--stdin-filepath",
+        "{buffer_path}"
+      ]
+    }
+  },
+  "prettier": {
+    "singleQuote": true,
+    "tabWidth": 2,
+    "useTabs": false,
+    "arrowParens": "always",
+    "semi": false,
+    "bracketSpacing": false,
+    "trailingComma": "all"
+  },
+  "languages": {
+    "Markdown": {
+      "tab_size": 2,
+      "soft_wrap": "editor_width"
+    },
+    "JSON": {
+      "tab_size": 4
+    },
+    "CSS": {
+      "tab_size": 2
+    },
+    "JavaScript": {
+      "tab_size": 2
+    },
+    "TypeScript": {
+      "tab_size": 2
+    },
+    "TSX": {
+      "tab_size": 2
+    },
+    "Python": {
+      "tab_size": 4
+    },
+    "YAML": {
+      "tab_size": 2
+    }
+  }
+}
