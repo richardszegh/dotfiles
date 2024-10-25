@@ -33,8 +33,7 @@
   },
   "git": {
     "inline_blame": {
-      "enabled": false,
-      "delay_ms": 10000
+      "enabled": false
     }
   },
   "assistant": {
