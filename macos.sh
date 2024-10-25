@@ -131,6 +131,16 @@ else
   fi
 fi
 
+if [ ! -d "${HOME}/.config/alacritty" ]; then
+  mkdir -p "${HOME}/.config/alacritty"
+  echo "[macos.sh](info) created '~/.config/alacritty' folder, because it did not exist"
+else
+  if [ -e "${HOME}/.config/alacritty/alacritty.toml" ]; then
+    rm "${HOME}/.config/alacritty/alacritty.toml"
+    echo "[macos.sh](info) removed default '~/.config/alacritty/alacritty.toml'"
+  fi
+fi
+
 # (7/9) alias dotfiles
 echo "[macos.sh](info) creating aliases for all dotfiles..."
 ln -s "${HOME}/Workspace/dotfiles/.zshrc" "${HOME}/.zshrc"
@@ -141,6 +151,7 @@ ln -s "${HOME}/Workspace/dotfiles/atg/.gitconfig" "${HOME}/atg/.gitconfig"
 ln -s "${HOME}/Workspace/dotfiles/.ssh/config" "${HOME}/.ssh/config"
 ln -s "${HOME}/Workspace/dotfiles/.config/zed/settings.json" "${HOME}/.config/zed/settings.json"
 ln -s "${HOME}/Workspace/dotfiles/.config/zed/keymap.json" "${HOME}/.config/zed/keymap.json"
+ln -s "${HOME}/Workspace/dotfiles/.config/alacritty/alacritty.toml" "${HOME}/.config/alacritty/alacritty.toml"
 echo "[macos.sh](info) finished creating aliases for all dotfiles"
 
 # (8/9) clone and alias scripts
