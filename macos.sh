@@ -117,6 +117,20 @@ else
   fi
 fi
 
+if [ ! -d "${HOME}/.config/zed" ]; then
+  mkdir -p "${HOME}/.config/zed"
+  echo "[macos.sh](info) created '~/.config/zed' folder, because it did not exist"
+else
+  if [ -e "${HOME}/.config/zed/settings.json" ]; then
+    rm "${HOME}/.config/zed/settings.json"
+    echo "[macos.sh](info) removed default '~/.config/zed/settings.json'"
+  fi
+  if [ -e "${HOME}/.config/zed/keymap.json" ]; then
+    rm "${HOME}/.config/zed/keymap.json"
+    echo "[macos.sh](info) removed default '~/.config/zed/keymap.json'"
+  fi
+fi
+
 # (7/9) alias dotfiles
 echo "[macos.sh](info) creating aliases for all dotfiles..."
 ln -s "${HOME}/Workspace/dotfiles/.zshrc" "${HOME}/.zshrc"
@@ -125,6 +139,8 @@ ln -s "${HOME}/Workspace/dotfiles/.vim/autoload/vim.plug" "${HOME}/.vim/autoload
 ln -s "${HOME}/Workspace/dotfiles/.gitconfig" "${HOME}/.gitconfig"
 ln -s "${HOME}/Workspace/dotfiles/atg/.gitconfig" "${HOME}/atg/.gitconfig"
 ln -s "${HOME}/Workspace/dotfiles/.ssh/config" "${HOME}/.ssh/config"
+ln -s "${HOME}/Workspace/dotfiles/.config/zed/settings.json" "${HOME}/.config/zed/settings.json"
+ln -s "${HOME}/Workspace/dotfiles/.config/zed/keymap.json" "${HOME}/.config/zed/keymap.json"
 echo "[macos.sh](info) finished creating aliases for all dotfiles"
 
 # (8/9) clone and alias scripts
