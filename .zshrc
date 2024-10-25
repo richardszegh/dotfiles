@@ -103,6 +103,8 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias c="clear"
+alias ssh="TERM=xterm-256color ssh"
+
 alias ip="curl wtfismyip.com/json"
 
 alias gfl="gfa && gl"
