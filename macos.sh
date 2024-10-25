@@ -39,7 +39,7 @@ brew install --cask --no-quarantine alacritty
 brew install --cask firefox google-chrome 1password pocket-casts \
   sunsama slack loom zoom \
   figma exifcleaner audacity handbrake losslesscut \
-  kitty visual-studio-code webstorm orbstack insomnia wireshark fork linear-linear \
+  visual-studio-code zed orbstack insomnia wireshark fork linear-linear typora \
   the-unarchiver transmission veracrypt flux rectangle cleanshot keepingyouawake raycast pika cold-turkey-blocker \
   balance-lock maccy istat-menus jordanbaird-ice bettertouchtool appcleaner \
   telegram \
@@ -76,14 +76,27 @@ if [ -e "${HOME}/.zshrc" ]; then
   rm "${HOME}/.zshrc"
   echo "[macos.sh](info) removed default '.zshrc'"
 fi
+
 if [ -e "${HOME}/.vimrc" ]; then
   rm "${HOME}/.vimrc"
   echo "[macos.sh](info) removed default '.vimrc'"
 fi
+
+if [ ! -d "${HOME}/.vim/autoload" ]; then
+  mkdir -p "${HOME}/.vim/autoload"
+  echo "[macos.sh](info) created '~/.vim/autoload' folder, because it did not exist"
+else
+  if [ -e "${HOME}/.vim/autoload/plug.vim" ]; then
+    rm "${HOME}/.vim/autoload/plug.vim"
+    echo "[macos.sh](info) removed default '~/.vim/autoload/plug.vim'"
+  fi
+fi
+
 if [ -e "${HOME}/.gitconfig" ]; then
   rm "${HOME}/.gitconfig"
   echo "[macos.sh](info) removed default '.gitconfig'"
 fi
+
 if [ ! -d "${HOME}/atg" ]; then
   mkdir -p "${HOME}/atg"
   echo "[macos.sh](info) created '~/atg' folder, because it did not exist"
@@ -93,6 +106,7 @@ else
     echo "[macos.sh](info) removed default '~/atg/.gitconfig'"
   fi
 fi
+
 if [ ! -d "${HOME}/.ssh" ]; then
   mkdir -p "${HOME}/.ssh"
   echo "[macos.sh](info) created '~/.ssh' folder, because it did not exist"
@@ -102,6 +116,7 @@ else
     echo "[macos.sh](info) removed default '~/.ssh/config'"
   fi
 fi
+
 if [ ! -d "${HOME}/.config/kitty" ]; then
   mkdir -p "${HOME}/.config/kitty"
   echo "[macos.sh](info) created '~/.config/kitty' folder, because it did not exist"
@@ -116,6 +131,7 @@ fi
 echo "[macos.sh](info) creating aliases for all dotfiles..."
 ln -s "${HOME}/Workspace/dotfiles/.zshrc" "${HOME}/.zshrc"
 ln -s "${HOME}/Workspace/dotfiles/.vimrc" "${HOME}/.vimrc"
+ln -s "${HOME}/Workspace/dotfiles/.vim/autoload/vim.plug" "${HOME}/.vim/autoload/vim.plug"
 ln -s "${HOME}/Workspace/dotfiles/.gitconfig" "${HOME}/.gitconfig"
 ln -s "${HOME}/Workspace/dotfiles/atg/.gitconfig" "${HOME}/atg/.gitconfig"
 ln -s "${HOME}/Workspace/dotfiles/.ssh/config" "${HOME}/.ssh/config"
@@ -128,12 +144,17 @@ git clone https://github.com/richardszegh/scripts ${HOME}/Workspace/scripts
 chmod +x ${HOME}/Workspace/scripts/*
 echo "[macos.sh](info) finished cloning and aliasing user scripts"
 
-# (9/9)
+# (9/9) misc.
 echo "[macos.sh](info) installing fonts..."
 brew tap homebrew/cask-fonts
 brew install font-hack
 echo "[macos.sh](info) finished installing fonts"
 
+echo "[macos.sh](info) installing vim plugins..."
+vim +PlugInstall +qall
+echo "[macos.sh](info) finished installing vim plugins"
+
+# reload .zshrc
 source ${HOME}/.zshrc
 
 echo "[macos.sh](info) successfully set up your Mac 🚀"
