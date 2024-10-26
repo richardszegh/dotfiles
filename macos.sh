@@ -145,7 +145,7 @@ fi
 echo "[macos.sh](info) creating aliases for all dotfiles..."
 ln -s "${HOME}/Workspace/dotfiles/.zshrc" "${HOME}/.zshrc"
 ln -s "${HOME}/Workspace/dotfiles/.vimrc" "${HOME}/.vimrc"
-ln -s "${HOME}/Workspace/dotfiles/.vim/autoload/vim.plug" "${HOME}/.vim/autoload/vim.plug"
+ln -s "${HOME}/Workspace/dotfiles/.vim/autoload/plug.vim" "${HOME}/.vim/autoload/plug.vim"
 ln -s "${HOME}/Workspace/dotfiles/.gitconfig" "${HOME}/.gitconfig"
 ln -s "${HOME}/Workspace/dotfiles/atg/.gitconfig" "${HOME}/atg/.gitconfig"
 ln -s "${HOME}/Workspace/dotfiles/.ssh/config" "${HOME}/.ssh/config"
