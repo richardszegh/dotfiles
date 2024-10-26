@@ -36,14 +36,14 @@ echo "[macos.sh](info) finished installing brew packages"
 # (3/9) install brew casks
 echo "[macos.sh](info) installing brew casks..."
 brew install --cask --no-quarantine alacritty
-brew install --cask firefox google-chrome 1password pocket-casts \
+brew install --cask firefox google-chrome 1password \
   sunsama slack loom zoom \
   figma exifcleaner audacity handbrake losslesscut \
   visual-studio-code zed orbstack insomnia wireshark fork linear-linear typora \
   the-unarchiver transmission veracrypt flux rectangle cleanshot keepingyouawake raycast pika cold-turkey-blocker \
   balance-lock maccy istat-menus jordanbaird-ice bettertouchtool appcleaner \
-  telegram \
-  soulseek xld musicbrainz-picard meta
+  soulseek xld musicbrainz-picard meta \
+  telegram pocket-casts \
 echo "[macos.sh](info) finished installing brew casks"
 
 # (4/9) install oh-my-zsh
@@ -182,6 +182,7 @@ echo "[macos.sh](warn)   - Infuse"
 echo "[macos.sh](warn)   - Drivers (Logitech etc.)"
 echo "[macos.sh](warn)   - Kindle, Send to Kindle, GoToMeeting"
 echo "[macos.sh](warn)   - VPN, Jellyfin, Synergy, REW"
+echo "[macos.sh](warn)   - Ledger Live, Electrum, TradingView"
 echo "-"
 echo "[macos.sh](warn) Optional:"
 echo "[macos.sh](warn)   - install apps & tools from Gumroad (https://app.gumroad.com/library)"
