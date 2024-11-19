@@ -37,13 +37,13 @@ echo "[macos.sh](info) finished installing brew packages"
 echo "[macos.sh](info) installing brew casks..."
 brew install --cask --no-quarantine alacritty
 brew install --cask google-chrome brave-browser firefox 1password \
-  sunsama slack loom zoom \
+  slack loom zoom \
   figma exifcleaner audacity handbrake losslesscut \
-  visual-studio-code zed orbstack insomnia wireshark fork linear-linear typora \
+  typora visual-studio-code zed orbstack insomnia wireshark fork linear-linear \
   the-unarchiver transmission veracrypt flux rectangle cleanshot keepingyouawake raycast pika cold-turkey-blocker \
   balance-lock maccy istat-menus jordanbaird-ice bettertouchtool appcleaner \
   soulseek xld musicbrainz-picard meta \
-  telegram pocket-casts \
+  telegram pocket-casts
 echo "[macos.sh](info) finished installing brew casks"
 
 # (4/9) install oh-my-zsh
