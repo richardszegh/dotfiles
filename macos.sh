@@ -43,7 +43,7 @@ brew install --cask google-chrome brave-browser firefox 1password \
   the-unarchiver transmission veracrypt flux rectangle cleanshot keepingyouawake raycast pika cold-turkey-blocker \
   balance-lock maccy istat-menus jordanbaird-ice bettertouchtool appcleaner \
   soulseek xld musicbrainz-picard meta \
-  telegram pocket-casts
+  telegram roon pocket-casts
 echo "[macos.sh](info) finished installing brew casks"
 
 # (4/9) install oh-my-zsh
@@ -181,7 +181,7 @@ echo "[macos.sh](warn)   - DaVinci Resolve"
 echo "[macos.sh](warn)   - Infuse"
 echo "[macos.sh](warn)   - Drivers (Logitech etc.)"
 echo "[macos.sh](warn)   - Kindle, Send to Kindle, GoToMeeting"
-echo "[macos.sh](warn)   - VPN, Jellyfin, Synergy, REW"
+echo "[macos.sh](warn)   - Tailscale, Jellyfin, Synergy, REW"
 echo "[macos.sh](warn)   - Ledger Live, Electrum, TradingView"
 echo "-"
 echo "[macos.sh](warn) Optional:"
