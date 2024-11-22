@@ -67,7 +67,7 @@ if [ -d "${HOME}/.nvm" ]; then
   echo "[macos.sh](info) NVM is already installed, skipping..."
 else
   echo "[macos.sh](info) installing NVM..."
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh)"
   echo "[macos.sh](info) finished installing NVM"
 fi
 
@@ -117,20 +117,6 @@ else
   fi
 fi
 
-if [ ! -d "${HOME}/.config/zed" ]; then
-  mkdir -p "${HOME}/.config/zed"
-  echo "[macos.sh](info) created '~/.config/zed' folder, because it did not exist"
-else
-  if [ -e "${HOME}/.config/zed/settings.json" ]; then
-    rm "${HOME}/.config/zed/settings.json"
-    echo "[macos.sh](info) removed default '~/.config/zed/settings.json'"
-  fi
-  if [ -e "${HOME}/.config/zed/keymap.json" ]; then
-    rm "${HOME}/.config/zed/keymap.json"
-    echo "[macos.sh](info) removed default '~/.config/zed/keymap.json'"
-  fi
-fi
-
 if [ ! -d "${HOME}/.config/alacritty" ]; then
   mkdir -p "${HOME}/.config/alacritty"
   echo "[macos.sh](info) created '~/.config/alacritty' folder, because it did not exist"
@@ -149,8 +135,6 @@ ln -s "${HOME}/Workspace/dotfiles/.vim/autoload/plug.vim" "${HOME}/.vim/autoload
 ln -s "${HOME}/Workspace/dotfiles/.gitconfig" "${HOME}/.gitconfig"
 ln -s "${HOME}/Workspace/dotfiles/atg/.gitconfig" "${HOME}/atg/.gitconfig"
 ln -s "${HOME}/Workspace/dotfiles/.ssh/config" "${HOME}/.ssh/config"
-ln -s "${HOME}/Workspace/dotfiles/.config/zed/settings.json" "${HOME}/.config/zed/settings.json"
-ln -s "${HOME}/Workspace/dotfiles/.config/zed/keymap.json" "${HOME}/.config/zed/keymap.json"
 ln -s "${HOME}/Workspace/dotfiles/.config/alacritty/alacritty.toml" "${HOME}/.config/alacritty/alacritty.toml"
 echo "[macos.sh](info) finished creating aliases for all dotfiles"
 
@@ -162,8 +146,8 @@ echo "[macos.sh](info) finished cloning and aliasing user scripts"
 
 # (9/9) misc.
 echo "[macos.sh](info) installing fonts..."
-brew tap homebrew/cask-fonts
-brew install font-hack
+brew install --cask font-hack
+brew install --cask font-ibm-plex-mono
 echo "[macos.sh](info) finished installing fonts"
 
 echo "[macos.sh](info) installing vim plugins..."
