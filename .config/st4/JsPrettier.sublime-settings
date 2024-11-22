@@ -1,0 +1,14 @@
+// Settings in here override those in "/JsPrettier/JsPrettier.sublime-settings",
+
+{
+    "auto_format_on_save": true,
+    "prettier_options": {
+        "singleQuote": true,
+        "tabWidth": 2,
+        "useTabs": false,
+        "arrowParens": "always",
+        "semi": false,
+        "bracketSpacing": false,
+        "trailingComma": "all"
+    }
+}

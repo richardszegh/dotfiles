@@ -1,0 +1,19 @@
+// Settings in here override those in "Default/Preferences.sublime-settings",
+// and are overridden in turn by syntax-specific settings.
+{
+    "font_size": 22,
+    "font_face": "IBM Plex Mono",
+    "translate_tabs_to_spaces": true,
+    "trim_automatic_white_space": true,
+    "trim_trailing_white_space_on_save": "not_on_caret",
+    "ensure_newline_at_eof_on_save": true,
+    "open_files_in_new_window": "always",
+    "ignored_packages":
+    [
+		"Vintage",
+    ],
+    "index_files": true,
+    "theme": "Default Dark.sublime-theme",
+    "color_scheme": "Mariana.sublime-color-scheme",
+    "goto_anything_exclude_gitignore": true
+}
