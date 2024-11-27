@@ -35,7 +35,7 @@ echo "[macos.sh](info) finished installing brew packages"
 
 # (3/9) install brew casks
 echo "[macos.sh](info) installing brew casks..."
-brew install --cask --no-quarantine alacritty
+brew install --cask --no-quarantine iterm2
 brew install --cask google-chrome brave-browser firefox 1password \
   slack loom zoom \
   figma exifcleaner audacity handbrake losslesscut \
@@ -117,16 +117,6 @@ else
   fi
 fi
 
-if [ ! -d "${HOME}/.config/alacritty" ]; then
-  mkdir -p "${HOME}/.config/alacritty"
-  echo "[macos.sh](info) created '~/.config/alacritty' folder, because it did not exist"
-else
-  if [ -e "${HOME}/.config/alacritty/alacritty.toml" ]; then
-    rm "${HOME}/.config/alacritty/alacritty.toml"
-    echo "[macos.sh](info) removed default '~/.config/alacritty/alacritty.toml'"
-  fi
-fi
-
 # (7/9) alias dotfiles
 echo "[macos.sh](info) creating aliases for all dotfiles..."
 ln -s "${HOME}/Workspace/dotfiles/.zshrc" "${HOME}/.zshrc"
@@ -135,7 +125,6 @@ ln -s "${HOME}/Workspace/dotfiles/.vim/autoload/plug.vim" "${HOME}/.vim/autoload
 ln -s "${HOME}/Workspace/dotfiles/.gitconfig" "${HOME}/.gitconfig"
 ln -s "${HOME}/Workspace/dotfiles/atg/.gitconfig" "${HOME}/atg/.gitconfig"
 ln -s "${HOME}/Workspace/dotfiles/.ssh/config" "${HOME}/.ssh/config"
-ln -s "${HOME}/Workspace/dotfiles/.config/alacritty/alacritty.toml" "${HOME}/.config/alacritty/alacritty.toml"
 echo "[macos.sh](info) finished creating aliases for all dotfiles"
 
 # (8/9) clone and alias scripts
