@@ -35,11 +35,10 @@ echo "[macos.sh](info) finished installing brew packages"
 
 # (3/9) install brew casks
 echo "[macos.sh](info) installing brew casks..."
-brew install --cask --no-quarantine iterm2
 brew install --cask google-chrome brave-browser firefox 1password \
   slack loom zoom \
   figma exifcleaner audacity handbrake losslesscut \
-  typora visual-studio-code webstorm orbstack insomnia wireshark fork linear-linear \
+  hyper typora visual-studio-code webstorm orbstack insomnia wireshark fork linear-linear \
   the-unarchiver transmission veracrypt flux rectangle cleanshot keepingyouawake raycast pika cold-turkey-blocker \
   balance-lock maccy istat-menus jordanbaird-ice bettertouchtool appcleaner \
   soulseek xld musicbrainz-picard meta \
