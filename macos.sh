@@ -41,8 +41,9 @@ brew install --cask google-chrome brave-browser firefox 1password \
   hyper typora visual-studio-code webstorm orbstack insomnia wireshark fork linear-linear \
   the-unarchiver transmission veracrypt flux rectangle cleanshot keepingyouawake raycast pika cold-turkey-blocker \
   balance-lock maccy istat-menus jordanbaird-ice bettertouchtool appcleaner \
-  soulseek xld musicbrainz-picard meta \
-  telegram roon pocket-casts
+  soulseek xld musicbrainz-picard meta utm \
+  electrum ledger-live tradingview \
+  telegram roon pocket-casts gotomeeting
 echo "[macos.sh](info) finished installing brew casks"
 
 # (4/9) install oh-my-zsh
@@ -152,9 +153,8 @@ echo "[macos.sh](warn)   - Xcode Command Line Tools ($(xcode-select --install))"
 echo "[macos.sh](warn)   - DaVinci Resolve"
 echo "[macos.sh](warn)   - Infuse"
 echo "[macos.sh](warn)   - Drivers (Logitech etc.)"
-echo "[macos.sh](warn)   - Kindle, Send to Kindle, GoToMeeting"
-echo "[macos.sh](warn)   - Tailscale, Jellyfin, Synergy, REW"
-echo "[macos.sh](warn)   - Ledger Live, Electrum, TradingView"
+echo "[macos.sh](warn)   - Kindle, Send to Kindle"
+echo "[macos.sh](warn)   - Tailscale, REW"
 echo "-"
 echo "[macos.sh](warn) Optional:"
 echo "[macos.sh](warn)   - install apps & tools from Gumroad (https://app.gumroad.com/library)"
