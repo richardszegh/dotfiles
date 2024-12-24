@@ -35,7 +35,7 @@ echo "[macos.sh](info) finished installing brew packages"
 
 # (3/9) install brew casks
 echo "[macos.sh](info) installing brew casks..."
-brew install --cask google-chrome brave-browser firefox 1password \
+brew install --cask brave-browser firefox 1password \
   slack loom zoom \
   figma exifcleaner audacity handbrake losslesscut \
   hyper typora visual-studio-code webstorm orbstack insomnia wireshark fork linear-linear \
@@ -43,7 +43,7 @@ brew install --cask google-chrome brave-browser firefox 1password \
   balance-lock maccy istat-menus jordanbaird-ice bettertouchtool appcleaner \
   soulseek xld musicbrainz-picard meta utm \
   electrum ledger-live tradingview \
-  telegram roon pocket-casts gotomeeting
+  telegram discord roon pocket-casts gotomeeting
 echo "[macos.sh](info) finished installing brew casks"
 
 # (4/9) install oh-my-zsh
