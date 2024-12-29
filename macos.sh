@@ -35,7 +35,7 @@ echo "[macos.sh](info) finished installing brew packages"
 
 # (3/9) install brew casks
 echo "[macos.sh](info) installing brew casks..."
-brew install --cask brave-browser firefox 1password \
+brew install --cask eloston-chromium firefox 1password \
   slack loom zoom \
   figma exifcleaner audacity handbrake losslesscut \
   hyper typora visual-studio-code webstorm orbstack insomnia wireshark fork linear-linear \
