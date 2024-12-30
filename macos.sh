@@ -38,7 +38,8 @@ echo "[macos.sh](info) installing brew casks..."
 brew install --cask eloston-chromium firefox 1password \
   slack loom zoom \
   figma exifcleaner audacity handbrake losslesscut \
-  hyper typora visual-studio-code webstorm orbstack insomnia wireshark fork linear-linear \
+  obsidian typora \
+  hyper visual-studio-code webstorm orbstack insomnia wireshark fork linear-linear \
   the-unarchiver transmission veracrypt flux rectangle cleanshot keepingyouawake raycast pika cold-turkey-blocker \
   balance-lock maccy istat-menus jordanbaird-ice bettertouchtool appcleaner \
   soulseek xld musicbrainz-picard meta utm \
